@@ -8,7 +8,7 @@ async function connectMongo(){
             useUnifiedTopology:true 
         } 
         console.log("connetd to mongodb");
-
+  
     } catch(a){
         console.log(a); 
         process.exit(1);
