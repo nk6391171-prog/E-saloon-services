@@ -3,7 +3,7 @@ import{Route, Routes} from 'react-router-dom'
 import Register from './Register'
 import Login from './Login'
 import Home from './Home'
-import DetailPage from './DetailPage'
+import DetailPage from './DetailPage'                                                                      
 function RouterPage() {
   return (
     <div>

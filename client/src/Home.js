@@ -8,7 +8,7 @@ function Home() {
   const[date,setDate]=useState([]);
 
   async function getDate(){
-    const response = await axios.get("http://localhost:5000/product");
+    const response = await axios.get("https://e-saloon-services.onrender.com/product");
     setDate(response.data);
 
     console.log(response.date);

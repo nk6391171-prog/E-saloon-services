@@ -7,7 +7,12 @@
  
 
         const app=express();
-        app.use(cors());
+       
+        app.use(cors({
+            origin:"https://esaloonservices.netlify.app"
+        }));
+
+
         app.use(express.json())
 
         app.get('/product',(req,res)=>{
@@ -15,7 +20,7 @@
              .then(cat=>{ 
 
                 res.json(cat);
-                console.log(cat);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  console.log(cat);
              })
         })
 
