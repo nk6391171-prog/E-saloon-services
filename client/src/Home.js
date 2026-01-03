@@ -5,16 +5,15 @@ import axios from "axios";
 
 function Home() {
   const navi=useNavigate();
-  const[date,setDate]=useState([]);
+  const[data,setDate]=useState([]);
 
   async function getDate(){
     const response = await axios.get("https://e-saloon-services.onrender.com/product");
-    
-    
+  
     
     setDate(response.data);
 
-    console.log(response.date);
+    console.log(response.data);
 
 
   } 
@@ -71,7 +70,7 @@ function Home() {
   }
   return (
     <div className='productcontainer'>{
-      date.map((product)=>(
+      data.map((product)=>(
 
         
         <div className='productcard' onClick={()=>goToDetailPage(product.id)} key={product.id}>
@@ -80,7 +79,7 @@ function Home() {
 <h3>{product.productPrice}</h3>
 <p className='productDescription'>{product.productDescription}</p>
 
-<iframe width="560" height="315" src={product.productVideo} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{/* <iframe width="560" height="315" src={product.productVideo} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
 
 
     </div>

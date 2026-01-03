@@ -9,11 +9,10 @@
         const app=express();
        
         app.use(cors({
-            origin:"https://imaginative-tarsier-731810.netlify.app/",
-            mathods:"GET,POST,PUT,PATCH,DELETE",
+            origin:"https://imaginative-tarsier-731810.netlify.app",
+            methods:"GET",
             credentials:true
         }));
-
 
         app.use(express.json())
 
