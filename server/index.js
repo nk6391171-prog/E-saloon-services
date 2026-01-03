@@ -9,7 +9,7 @@
         const app=express();
        
         app.use(cors({
-            origin:"esaloonservicesbholenath.netlify.app"
+            origin:"https://esaloonservicesbholenath.netlify.app/"
         }));
 
 

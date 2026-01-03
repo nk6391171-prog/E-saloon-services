@@ -1,7 +1,7 @@
 import React, {  useEffect, useState } from 'react'
 import './css/Home.css'
 import { useNavigate } from 'react-router-dom'
-import axios from 'axios';
+import axios from "axios";
 
 function Home() {
   const navi=useNavigate();
@@ -9,6 +9,9 @@ function Home() {
 
   async function getDate(){
     const response = await axios.get("https://e-saloon-services.onrender.com/product");
+    
+    
+    
     setDate(response.data);
 
     console.log(response.date);
@@ -20,7 +23,10 @@ function Home() {
 
   useEffect(()=>{
     getDate();
-  },[])
+
+  
+    
+  },[]);
 
   const productList=[
     {
@@ -32,7 +38,7 @@ function Home() {
     {
       id:2,
       productImage:"https://i.pinimg.com/564x/7c/b9/51/7cb95187f4e8de1d35d1c0d326a9750c.jpg",
-      productTitle:"Desiner Mehandi",
+      productTitle:"Desiner Mehandicatch(err => cons",
       productPrice:" Rs 2000"
     },
     {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const[email,setEmail]=useState();
@@ -16,7 +16,7 @@ function Login() {
 function logibtn(event){
   event.preventDefault();
 
-  navigate     ('/home');
+  navigate('/home');
   alert("login succesfull")
 }
 
