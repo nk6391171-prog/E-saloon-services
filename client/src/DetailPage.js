@@ -59,7 +59,7 @@ function DetailPage() {
   return (
 
     <div>
-       <Slider {...settings}>
+       <Slider {...settings} className='Neha'>
 
               {
 productList.map((product)=>(
