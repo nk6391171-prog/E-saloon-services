@@ -5,6 +5,7 @@ import productList from './Home'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import './css/DetailPage.css'
 
 function DetailPage() {
     const {id}=useParams();
@@ -58,7 +59,7 @@ function DetailPage() {
     
   return (
 
-    <div>
+    <div className='container'>
        <Slider {...settings} className='Neha'>
 
               {
