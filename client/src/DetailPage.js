@@ -2,9 +2,19 @@ import React, { use } from 'react'
 import { useParams } from 'react-router-dom'
 import ab from './images/a.jpg'
 import productList from './Home'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 function DetailPage() {
     const {id}=useParams();
+     var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
     const productList=[
     {
       id:1,
@@ -47,13 +57,24 @@ function DetailPage() {
 
     
   return (
-    <div>
-      <h1>Detail Page{id}</h1>
 
-      <h1>{product.productTitle}</h1>
-      <h1>{product.productTitle}</h1>
-      <h2>{product.productPrice}</h2>  
-      <img src={product.productImage}/>
+    <div>
+       <Slider {...settings}>
+
+              {
+productList.map((product)=>(
+        <div>
+
+<img src={product.productImage} className='sliderImage'/>
+<h1 className='sliderTitle'>{product.productTitle}</h1>
+        </div>
+      ))
+
+      }
+       </Slider>
+
+      
+
       
     </div>
   )
