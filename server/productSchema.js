@@ -5,7 +5,10 @@ const proSchema=mongoose.Schema({
     productTitle:String,
     productPrice:String,
     productVideo:String,
-    productDescription:String
+    productDescription:String,
+    detail:{
+        productDetailImage:String
+    }
 })
 
 module.exports=mongoose.model("beautyproducts",proSchema);

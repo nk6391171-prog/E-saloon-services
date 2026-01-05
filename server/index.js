@@ -25,6 +25,15 @@
              })
         })
 
+        app.get('/detail:id',(req,res)=>{
+             proSchema.findbyid({})
+             .then(cat=>{ 
+
+                res.json(cat);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  console.log(cat);
+             })
+        })
+
         app.get('/',(reg,res)=>{
             res.send("Hello");
         })
