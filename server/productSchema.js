@@ -6,7 +6,7 @@ const proSchema=mongoose.Schema({
     productPrice:String,
     productVideo:String,
     productDescription:String,
-    detail:{
+    productDetails:{
         productDetailImage:String
     }
 })
