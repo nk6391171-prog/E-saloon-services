@@ -27,10 +27,10 @@
 
         
 
-        app.get('/detail:id',(req,res)=>{
+        app.get('/product:id',(req,res)=>{
 
             const id=req.params.id;
-             proSchema.findbyid({id})
+             proSchema.findbyid(id)
              .then(cat=>{ 
 
                 res.json(cat);
