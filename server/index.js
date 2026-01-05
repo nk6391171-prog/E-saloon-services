@@ -25,8 +25,12 @@
              })
         })
 
+        
+
         app.get('/detail:id',(req,res)=>{
-             proSchema.findbyid({})
+
+            const id=req.params.id;
+             proSchema.findbyid({id})
              .then(cat=>{ 
 
                 res.json(cat);
