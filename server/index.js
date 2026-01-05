@@ -27,13 +27,13 @@
 
         
 
-        app.get('/product:id',async (req,res)=>{
+        app.get('/product/:id',async (req,res)=>{
 
             const id=req.params.id;
              await proSchema.findById(id)
              .then(cat=>{ 
 
-                res.json(cat);
+                 res.json(cat);
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   console.log(cat);
              })
         })
