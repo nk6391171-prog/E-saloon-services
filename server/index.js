@@ -9,7 +9,7 @@
         const app=express();
        
         app.use(cors({
-            origin:"https://imaginative-tarsier-731810.netlify.app",
+            origin:"https://esaloonservicesneha.netlify.app/",
             methods:"GET",
             credentials:true
         }));
